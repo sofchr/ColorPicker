@@ -1,9 +1,15 @@
 // Write your Color component here
 import { useState } from "react";
-// const [selectedColor, setSelectedColor] = useState("");
 
-const Color = ({ color }) => {
-  return <div className={color} onClick={() => setSelectedColor(color)}></div>;
+const Color = ({ color, setSelectedColor }) => {
+  return (
+    <div
+      className={color}
+      onClick={() => {
+        setSelectedColor(color);
+      }}
+    ></div>
+  );
 };
 
 const App = () => {
